@@ -1,0 +1,1928 @@
+Starting experiments at Tue 28 Mar 16:11:02 BST 2017 on dkr13.cs.ox.ac.uk
+Starting to processing b01/main.c at Tue 28 Mar 16:11:02 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38281
+/proc/meminfo: memFree=41479024/98955364 swapFree=0/16755168
+[pid=38281] ppid=38279 vsize=23388 CPUtime=0 cores=0-11
+/proc/38281/stat : 38281 (cbmc) S 38279 38281 36322 34816 38273 4210688 239 0 0 0 0 0 0 0 20 0 1 0 845686123 23949312 887 18446744073709551615 4194304 9906174 140730085775504 140730085767144 140405284690896 0 24578 0 16384 1 0 0 17 0 0 0 0 0 0 12004448 12018144 26152960 140730085778500 140730085778610 140730085778610 140730085781453 0
+/proc/38281/statm: 5847 887 814 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.03427 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38281
+/proc/meminfo: memFree=41479024/98955364 swapFree=0/16755168
+[pid=38281] ppid=38279 vsize=25104 CPUtime=0.01 cores=0-11
+/proc/38281/stat : 38281 (cbmc) R 38279 38281 36322 34816 38273 4210688 699 930 0 0 0 0 1 0 20 0 1 0 845686123 25706496 1910 18446744073709551615 4194304 9906174 140730085775504 140730085766736 140405284219259 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 26152960 140730085778500 140730085778610 140730085778610 140730085781453 0
+/proc/38281/statm: 6276 1910 1470 1395 0 1670 0
+Current children cumulated CPU time (s) 0.01
+Current children cumulated vsize (KiB) 25104
+Converting
+Type-checking main
+
+[startup+0.100229 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38281
+/proc/meminfo: memFree=41479024/98955364 swapFree=0/16755168
+[pid=38281] ppid=38279 vsize=41940 CPUtime=0.08 cores=0-11
+/proc/38281/stat : 38281 (cbmc) R 38279 38281 36322 34816 38273 4210688 5026 930 0 0 6 1 1 0 20 0 1 0 845686123 42946560 6161 18446744073709551615 4194304 9906174 140730085775504 140730085767440 140405293587312 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 26152960 140730085778500 140730085778610 140730085778610 140730085781453 0
+/proc/38281/statm: 10485 6161 1470 1395 0 5879 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 41940
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+
+[startup+0.300147 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38281
+/proc/meminfo: memFree=41479024/98955364 swapFree=0/16755168
+[pid=38281] ppid=38279 vsize=46704 CPUtime=0.28 cores=0-11
+/proc/38281/stat : 38281 (cbmc) R 38279 38281 36322 34816 38273 4210688 6226 930 0 0 26 1 1 0 20 0 1 0 845686123 47824896 7658 18446744073709551615 4194304 9906174 140730085775504 140730085767104 4620374 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 26152960 140730085778500 140730085778610 140730085778610 140730085781453 0
+/proc/38281/statm: 11676 7658 1804 1395 0 7070 0
+Current children cumulated CPU time (s) 0.28
+Current children cumulated vsize (KiB) 46704
+
+[startup+0.700117 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38281
+/proc/meminfo: memFree=41479024/98955364 swapFree=0/16755168
+[pid=38281] ppid=38279 vsize=46880 CPUtime=0.67 cores=0-11
+/proc/38281/stat : 38281 (cbmc) R 38279 38281 36322 34816 38273 4210688 6258 930 0 0 65 1 1 0 20 0 1 0 845686123 48005120 7658 18446744073709551615 4194304 9906174 140730085775504 140730085769696 4248082 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 26152960 140730085778500 140730085778610 140730085778610 140730085781453 0
+/proc/38281/statm: 11720 7658 1804 1395 0 7114 0
+Current children cumulated CPU time (s) 0.67
+Current children cumulated vsize (KiB) 46880
+Unwinding loop main.0 iteration 1 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 2 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 3 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 4 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 5 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 6 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 7 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 8 (10 max) file main.c line 117 function main thread 0
+Unwinding loop main.0 iteration 9 (10 max) file main.c line 117 function main thread 0
+Not unwinding loop main.0 iteration 10 (10 max) file main.c line 117 function main thread 0
+size of program expression: 4623 steps
+simple slicing removed 9 assignments
+Generated 10 VCC(s), 10 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+4731 variables, 30299 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 8           
+decisions             : 143         (0.00 % random)
+propagations          : 10483       
+conflict literals     : 18          0.00
+Runtime decision procedure: 0.229s
+
+** Results:
+[main.assertion.1] assertion smain.OVERFLW!=0: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+1.30012 s]
+/proc/loadavg: 0.00 0.00 0.00 2/323 38286
+/proc/meminfo: memFree=41455184/98955364 swapFree=0/16755168
+[pid=38281] ppid=38279 vsize=47832 CPUtime=1.27 cores=0-11
+/proc/38281/stat : 38281 (cbmc) R 38279 38281 36322 34816 38273 4210688 6650 930 0 0 125 1 1 0 20 0 1 0 845686123 48979968 8058 18446744073709551615 4194304 9906174 140730085775504 140730085767992 4863566 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 26152960 140730085778500 140730085778610 140730085778610 140730085781453 0
+/proc/38281/statm: 11958 8058 1836 1395 0 7352 0
+Current children cumulated CPU time (s) 1.27
+Current children cumulated vsize (KiB) 47832
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 1.315
+runsolver_walltime: 1.315
+CPU time (s): 1.30601
+runsolver_cputime: 1.30601
+CPU user time (s): 1.27944
+CPU system time (s): 0.026566
+CPU usage (%): 99.316
+Max. virtual memory (cumulated for all children) (KiB): 47832
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 1.27944
+system time used= 0.026566
+maximum resident set size= 32472
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7589
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 16
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 37
+involuntary context switches= 6
+
+runsolver used 0.009096 second user time and 0.022656 second system time
+
+The end
+done at Tue 28 Mar 16:11:03 BST 2017
+Starting to processing b02/main.c at Tue 28 Mar 16:11:03 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38291
+/proc/meminfo: memFree=41479460/98955364 swapFree=0/16755176
+[pid=38291] ppid=38289 vsize=23388 CPUtime=0 cores=0-11
+/proc/38291/stat : 38291 (cbmc) S 38289 38291 36322 34816 38273 4210688 237 0 0 0 0 0 0 0 20 0 1 0 845686266 23949312 874 18446744073709551615 4194304 9906174 140725400860160 140725400851800 139896673594320 0 24578 0 16384 1 0 0 17 7 0 0 0 0 0 12004448 12018144 32563200 140725400867908 140725400868018 140725400868018 140725400870861 0
+/proc/38291/statm: 5847 874 801 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.0573211 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38291
+/proc/meminfo: memFree=41479460/98955364 swapFree=0/16755176
+[pid=38291] ppid=38289 vsize=31104 CPUtime=0.03 cores=0-11
+/proc/38291/stat : 38291 (cbmc) R 38289 38291 36322 34816 38273 4210688 2196 930 0 0 2 0 1 0 20 0 1 0 845686266 31850496 3395 18446744073709551615 4194304 9906174 140725400860160 140725400851392 139896673122683 0 24578 0 16384 0 0 0 17 7 0 0 0 0 0 12004448 12018144 32563200 140725400867908 140725400868018 140725400868018 140725400870861 0
+/proc/38291/statm: 7776 3395 1457 1395 0 3170 0
+Current children cumulated CPU time (s) 0.03
+Current children cumulated vsize (KiB) 31104
+Converting
+Type-checking main
+
+[startup+0.100253 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38291
+/proc/meminfo: memFree=41479460/98955364 swapFree=0/16755176
+[pid=38291] ppid=38289 vsize=41808 CPUtime=0.08 cores=0-11
+/proc/38291/stat : 38291 (cbmc) R 38289 38291 36322 34816 38273 4210688 4987 930 0 0 6 1 1 0 20 0 1 0 845686266 42811392 6111 18446744073709551615 4194304 9906174 140725400860160 140725400851880 4626792 0 24578 0 16384 0 0 0 17 7 0 0 0 0 0 12004448 12018144 32563200 140725400867908 140725400868018 140725400868018 140725400870861 0
+/proc/38291/statm: 10452 6111 1457 1395 0 5846 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 41808
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+
+[startup+0.300157 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38291
+/proc/meminfo: memFree=41479460/98955364 swapFree=0/16755176
+[pid=38291] ppid=38289 vsize=46428 CPUtime=0.27 cores=0-11
+/proc/38291/stat : 38291 (cbmc) R 38289 38291 36322 34816 38273 4210688 6166 930 0 0 25 1 1 0 20 0 1 0 845686266 47542272 7623 18446744073709551615 4194304 9906174 140725400860160 140725400853008 4620348 0 24578 0 16384 0 0 0 17 7 0 0 0 0 0 12004448 12018144 32563200 140725400867908 140725400868018 140725400868018 140725400870861 0
+/proc/38291/statm: 11607 7623 1807 1395 0 7001 0
+Current children cumulated CPU time (s) 0.27
+Current children cumulated vsize (KiB) 46428
+Unwinding loop main.0 iteration 1 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 2 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 3 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 4 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 5 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 6 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 7 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 8 (10 max) file main.c line 87 function main thread 0
+Unwinding loop main.0 iteration 9 (10 max) file main.c line 87 function main thread 0
+Not unwinding loop main.0 iteration 10 (10 max) file main.c line 87 function main thread 0
+size of program expression: 2515 steps
+simple slicing removed 8 assignments
+Generated 9 VCC(s), 9 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+2458 variables, 14392 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 3           
+decisions             : 36          (0.00 % random)
+propagations          : 6443        
+conflict literals     : 8           0.00
+Runtime decision procedure: 0.094s
+
+** Results:
+[main.assertion.1] assertion smain.stato!=B: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.600143 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38291
+/proc/meminfo: memFree=41479460/98955364 swapFree=0/16755176
+[pid=38291] ppid=38289 vsize=46644 CPUtime=0.57 cores=0-11
+/proc/38291/stat : 38291 (cbmc) R 38289 38291 36322 34816 38273 4210688 6232 930 0 0 55 1 1 0 20 0 1 0 845686266 47763456 7694 18446744073709551615 4194304 9906174 140725400860160 140725400853472 4620358 0 24578 0 16384 0 0 0 17 7 0 0 0 0 0 12004448 12018144 32563200 140725400867908 140725400868018 140725400868018 140725400870861 0
+/proc/38291/statm: 11661 7694 1823 1395 0 7055 0
+Current children cumulated CPU time (s) 0.57
+Current children cumulated vsize (KiB) 46644
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+[startup+0.600143 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38291
+/proc/meminfo: memFree=41479460/98955364 swapFree=0/16755176
+[pid=38291] ppid=38289 vsize=46644 CPUtime=0.57 cores=0-11
+/proc/38291/stat : 38291 (cbmc) R 38289 38291 36322 34816 38273 4210688 6232 930 0 0 55 1 1 0 20 0 1 0 845686266 47763456 7694 18446744073709551615 4194304 9906174 140725400860160 140725400853472 4620358 0 24578 0 16384 0 0 0 17 7 0 0 0 0 0 12004448 12018144 32563200 140725400867908 140725400868018 140725400868018 140725400870861 0
+/proc/38291/statm: 11661 7694 1823 1395 0 7055 0
+Current children cumulated CPU time (s) 0.57
+Current children cumulated vsize (KiB) 46644
+
+Child status: 10
+Real time (s): 0.657131
+runsolver_walltime: 0.657131
+CPU time (s): 0.650949
+runsolver_cputime: 0.650949
+CPU user time (s): 0.627055
+CPU system time (s): 0.023894
+CPU usage (%): 99.0592
+Max. virtual memory (cumulated for all children) (KiB): 46644
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.627055
+system time used= 0.023894
+maximum resident set size= 31236
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7282
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 16
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 32
+involuntary context switches= 6
+
+runsolver used 0.009777 second user time and 0.015396 second system time
+
+The end
+done at Tue 28 Mar 16:11:04 BST 2017
+Starting to processing DAIO/main.c at Tue 28 Mar 16:11:04 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38301
+/proc/meminfo: memFree=41480048/98955364 swapFree=0/16755176
+[pid=38301] ppid=38299 vsize=23388 CPUtime=0 cores=0-11
+/proc/38301/stat : 38301 (cbmc) S 38299 38301 36322 34816 38273 4210688 238 0 0 0 0 0 0 0 20 0 1 0 845686338 23949312 874 18446744073709551615 4194304 9906174 140734372357888 140734372349528 140431216208848 0 24578 0 16384 1 0 0 17 1 0 0 0 0 0 12004448 12018144 21377024 140734372365379 140734372365489 140734372365489 140734372368333 0
+/proc/38301/statm: 5847 874 801 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.081287 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38301
+/proc/meminfo: memFree=41480048/98955364 swapFree=0/16755176
+[pid=38301] ppid=38299 vsize=38544 CPUtime=0.06 cores=0-11
+/proc/38301/stat : 38301 (cbmc) R 38299 38301 36322 34816 38273 4210688 4084 939 0 0 4 1 1 0 20 0 1 0 845686338 39469056 5239 18446744073709551615 4194304 9906174 140734372357888 140734372349120 140431215737211 0 24578 0 16384 0 0 0 17 2 0 0 0 0 0 12004448 12018144 21377024 140734372365379 140734372365489 140734372365489 140734372368333 0
+/proc/38301/statm: 9636 5239 1457 1395 0 5030 0
+Current children cumulated CPU time (s) 0.06
+Current children cumulated vsize (KiB) 38544
+
+[startup+0.100299 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38301
+/proc/meminfo: memFree=41480048/98955364 swapFree=0/16755176
+[pid=38301] ppid=38299 vsize=43164 CPUtime=0.07 cores=0-11
+/proc/38301/stat : 38301 (cbmc) R 38299 38301 36322 34816 38273 4210688 5268 939 0 0 5 1 1 0 20 0 1 0 845686338 44199936 6426 18446744073709551615 4194304 9906174 140734372357888 140734372351280 4622098 0 24578 0 16384 0 0 0 17 2 0 0 0 0 0 12004448 12018144 21377024 140734372365379 140734372365489 140734372365489 140734372368333 0
+/proc/38301/statm: 10791 6426 1457 1395 0 6185 0
+Current children cumulated CPU time (s) 0.07
+Current children cumulated vsize (KiB) 43164
+Converting
+Type-checking main
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 262 steps
+simple slicing removed 4 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+257 variables, 93 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 2           
+decisions             : 337         (0.00 % random)
+propagations          : 386         
+conflict literals     : 3           0.00
+Runtime decision procedure: 0.004s
+
+** Results:
+[main.assertion.1] assertion ((rx_status >> 3) & 1) != 0: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.200219 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38301
+/proc/meminfo: memFree=41480048/98955364 swapFree=0/16755176
+[pid=38301] ppid=38299 vsize=47888 CPUtime=0.18 cores=0-11
+/proc/38301/stat : 38301 (cbmc) R 38299 38301 36322 34816 38273 4210688 6532 939 0 0 15 2 1 0 20 0 1 0 845686338 49037312 7875 18446744073709551615 4194304 9906174 140734372357888 140734372351448 140431221481920 0 24578 0 16384 0 0 0 17 2 0 0 0 0 0 12004448 12018144 21377024 140734372365379 140734372365489 140734372365489 140734372368333 0
+/proc/38301/statm: 11972 8066 1887 1395 0 7366 0
+Current children cumulated CPU time (s) 0.18
+Current children cumulated vsize (KiB) 47888
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+[startup+0.200219 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38301
+/proc/meminfo: memFree=41480048/98955364 swapFree=0/16755176
+[pid=38301] ppid=38299 vsize=47888 CPUtime=0.18 cores=0-11
+/proc/38301/stat : 38301 (cbmc) R 38299 38301 36322 34816 38273 4210688 6532 939 0 0 15 2 1 0 20 0 1 0 845686338 49037312 7875 18446744073709551615 4194304 9906174 140734372357888 140734372351448 140431221481920 0 24578 0 16384 0 0 0 17 2 0 0 0 0 0 12004448 12018144 21377024 140734372365379 140734372365489 140734372365489 140734372368333 0
+/proc/38301/statm: 11972 8066 1887 1395 0 7366 0
+Current children cumulated CPU time (s) 0.18
+Current children cumulated vsize (KiB) 47888
+
+Child status: 10
+Real time (s): 0.210909
+runsolver_walltime: 0.210909
+CPU time (s): 0.206505
+runsolver_cputime: 0.206505
+CPU user time (s): 0.177325
+CPU system time (s): 0.02918
+CPU usage (%): 97.9119
+Max. virtual memory (cumulated for all children) (KiB): 47888
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.177325
+system time used= 0.02918
+maximum resident set size= 32264
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7482
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 24
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 32
+involuntary context switches= 5
+
+runsolver used 0.011469 second user time and 0.013777 second system time
+
+The end
+done at Tue 28 Mar 16:11:04 BST 2017
+Starting to processing Dekker/main.c at Tue 28 Mar 16:11:04 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38311
+/proc/meminfo: memFree=41480632/98955364 swapFree=0/16755184
+[pid=38311] ppid=38309 vsize=23388 CPUtime=0 cores=0-11
+/proc/38311/stat : 38311 (cbmc) S 38309 38311 36322 34816 38273 4210688 238 0 0 0 0 0 0 0 20 0 1 0 845686370 23949312 908 18446744073709551615 4194304 9906174 140726577278608 140726577270248 139973993319376 0 24578 0 16384 1 0 0 17 1 0 0 0 0 0 12004448 12018144 25415680 140726577284161 140726577284271 140726577284271 140726577287117 0
+/proc/38311/statm: 5847 908 834 1395 0 1241 0
+Converting
+Type-checking main
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.105236 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38311
+/proc/meminfo: memFree=41480632/98955364 swapFree=0/16755184
+[pid=38311] ppid=38309 vsize=41940 CPUtime=0.08 cores=0-11
+/proc/38311/stat : 38311 (cbmc) R 38309 38311 36322 34816 38273 4210688 4997 932 0 0 6 1 1 0 20 0 1 0 845686370 42946560 6140 18446744073709551615 4194304 9906174 140726577278608 140726577270112 139973992844887 0 24578 0 16384 0 0 0 17 2 0 0 0 0 0 12004448 12018144 25415680 140726577284161 140726577284271 140726577284271 140726577287117 0
+/proc/38311/statm: 10485 6140 1474 1395 0 5879 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 41940
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 142 steps
+simple slicing removed 2 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+384 variables, 946 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 1           
+decisions             : 109         (0.00 % random)
+propagations          : 503         
+conflict literals     : 1           0.00
+Runtime decision procedure: 0.003s
+
+** Results:
+[main.assertion.1] assertion tmp_if_expr$1: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.105236 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38311
+/proc/meminfo: memFree=41480632/98955364 swapFree=0/16755184
+[pid=38311] ppid=38309 vsize=41940 CPUtime=0.08 cores=0-11
+/proc/38311/stat : 38311 (cbmc) R 38309 38311 36322 34816 38273 4210688 4997 932 0 0 6 1 1 0 20 0 1 0 845686370 42946560 6140 18446744073709551615 4194304 9906174 140726577278608 140726577270112 139973992844887 0 24578 0 16384 0 0 0 17 2 0 0 0 0 0 12004448 12018144 25415680 140726577284161 140726577284271 140726577284271 140726577287117 0
+/proc/38311/statm: 10485 6140 1474 1395 0 5879 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 41940
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+[startup+0.105236 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38311
+/proc/meminfo: memFree=41480632/98955364 swapFree=0/16755184
+[pid=38311] ppid=38309 vsize=41940 CPUtime=0.08 cores=0-11
+/proc/38311/stat : 38311 (cbmc) R 38309 38311 36322 34816 38273 4210688 4997 932 0 0 6 1 1 0 20 0 1 0 845686370 42946560 6140 18446744073709551615 4194304 9906174 140726577278608 140726577270112 139973992844887 0 24578 0 16384 0 0 0 17 2 0 0 0 0 0 12004448 12018144 25415680 140726577284161 140726577284271 140726577284271 140726577287117 0
+/proc/38311/statm: 10485 6140 1474 1395 0 5879 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 41940
+
+Child status: 10
+Real time (s): 0.199935
+runsolver_walltime: 0.199935
+CPU time (s): 0.195152
+runsolver_cputime: 0.195152
+CPU user time (s): 0.167499
+CPU system time (s): 0.027653
+CPU usage (%): 97.6077
+Max. virtual memory (cumulated for all children) (KiB): 41940
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.167499
+system time used= 0.027653
+maximum resident set size= 30716
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7122
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 16
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 32
+involuntary context switches= 8
+
+runsolver used 0.007104 second user time and 0.017566 second system time
+
+The end
+done at Tue 28 Mar 16:11:05 BST 2017
+Starting to processing Elevator/main.c at Tue 28 Mar 16:11:05 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38321
+/proc/meminfo: memFree=41479944/98955364 swapFree=0/16755192
+[pid=38321] ppid=38319 vsize=0 CPUtime=0 cores=0-11
+/proc/38321/stat : 38321 (cbmc) Z 38319 38321 36322 34816 38273 4243468 222 0 0 0 0 0 0 0 20 0 1 0 845686394 0 0 18446744073709551615 0 0 0 0 0 0 24578 0 16384 0 0 0 17 9 0 0 0 0 0 0 0 0 0 0 0 0 0
+/proc/38321/statm: 0 0 0 0 0 0 0
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Started
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downTimer Thread Done
+Waiting for stop solver thread
+Stop Solver Thread: Timer Thread Stopped
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38321
+/proc/meminfo: memFree=41479944/98955364 swapFree=0/16755192
+[pid=38321] ppid=38319 vsize=0 CPUtime=0 cores=0-11
+/proc/38321/stat : 38321 (cbmc) Z 38319 38321 36322 34816 38273 4243468 222 0 0 0 0 0 0 0 20 0 1 0 845686394 0 0 18446744073709551615 0 0 0 0 0 0 24578 0 16384 0 0 0 17 9 0 0 0 0 0 0 0 0 0 0 0 0 0
+/proc/38321/statm: 0 0 0 0 0 0 0
+Current children cumulated CPU time (s) 0
+Current children cumulated vsize (KiB) 0
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 6
+Real time (s): 0.00963509
+runsolver_walltime: 0.00963509
+CPU time (s): 0.003944
+runsolver_cputime: 0.003944
+CPU user time (s): 0.002369
+CPU system time (s): 0.001575
+CPU usage (%): 40.9337
+Max. virtual memory (cumulated for all children) (KiB): 0
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.002369
+system time used= 0.001575
+maximum resident set size= 5804
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 222
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 8
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 4
+involuntary context switches= 1
+
+runsolver used 0.008148 second user time and 0.013654 second system time
+
+The end
+done at Tue 28 Mar 16:11:05 BST 2017
+Starting to processing FIFO/main.c at Tue 28 Mar 16:11:05 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38328
+/proc/meminfo: memFree=41479244/98955364 swapFree=0/16755200
+[pid=38328] ppid=38326 vsize=23388 CPUtime=0 cores=0-11
+/proc/38328/stat : 38328 (cbmc) S 38326 38328 36322 34816 38273 4210688 241 0 0 0 0 0 0 0 20 0 1 0 845686397 23949312 905 18446744073709551615 4194304 9906174 140730717065792 140730717057432 140056520600528 0 24578 0 16384 1 0 0 17 1 0 0 0 0 0 12004448 12018144 37859328 140730717074499 140730717074609 140730717074609 140730717077453 0
+/proc/38328/statm: 5847 905 832 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.06946 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38328
+/proc/meminfo: memFree=41479244/98955364 swapFree=0/16755200
+[pid=38328] ppid=38326 vsize=38932 CPUtime=0.05 cores=0-11
+/proc/38328/stat : 38328 (cbmc) R 38326 38328 36322 34816 38273 4210688 4208 933 0 0 3 1 1 0 20 0 1 0 845686397 39866368 5399 18446744073709551615 4194304 9906174 140730717065792 140730717057344 140056520128891 0 24578 0 16384 0 0 0 17 1 0 0 0 0 0 12004448 12018144 37859328 140730717074499 140730717074609 140730717074609 140730717077453 0
+/proc/38328/statm: 9733 5399 1488 1395 0 5127 0
+Current children cumulated CPU time (s) 0.05
+Current children cumulated vsize (KiB) 38932
+Converting
+Type-checking main
+
+[startup+0.100246 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38328
+/proc/meminfo: memFree=41479244/98955364 swapFree=0/16755200
+[pid=38328] ppid=38326 vsize=42072 CPUtime=0.08 cores=0-11
+/proc/38328/stat : 38328 (cbmc) R 38326 38328 36322 34816 38273 4210688 5062 933 0 0 6 1 1 0 20 0 1 0 845686397 43081728 6214 18446744073709551615 4194304 9906174 140730717065792 140730717057728 140056529496832 0 24578 0 16384 0 0 0 17 1 0 0 0 0 0 12004448 12018144 37859328 140730717074499 140730717074609 140730717074609 140730717077453 0
+/proc/38328/statm: 10518 6214 1488 1395 0 5912 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42072
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 181 steps
+simple slicing removed 6 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+490 variables, 1022 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 0           
+decisions             : 214         (0.00 % random)
+propagations          : 491         
+conflict literals     : 0           -nan
+Runtime decision procedure: 0.003s
+
+** Results:
+[design.assertion.1] assertion *equal != 1: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.100246 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38328
+/proc/meminfo: memFree=41479244/98955364 swapFree=0/16755200
+[pid=38328] ppid=38326 vsize=42072 CPUtime=0.08 cores=0-11
+/proc/38328/stat : 38328 (cbmc) R 38326 38328 36322 34816 38273 4210688 5062 933 0 0 6 1 1 0 20 0 1 0 845686397 43081728 6214 18446744073709551615 4194304 9906174 140730717065792 140730717057728 140056529496832 0 24578 0 16384 0 0 0 17 1 0 0 0 0 0 12004448 12018144 37859328 140730717074499 140730717074609 140730717074609 140730717077453 0
+/proc/38328/statm: 10518 6214 1488 1395 0 5912 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42072
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 0.166315
+runsolver_walltime: 0.166315
+CPU time (s): 0.1629
+runsolver_cputime: 0.1629
+CPU user time (s): 0.137031
+CPU system time (s): 0.025869
+CPU usage (%): 97.9467
+Max. virtual memory (cumulated for all children) (KiB): 42072
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.137031
+system time used= 0.025869
+maximum resident set size= 31040
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7194
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 24
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 31
+involuntary context switches= 5
+
+runsolver used 0.012837 second user time and 0.010326 second system time
+
+The end
+done at Tue 28 Mar 16:11:05 BST 2017
+Starting to processing Ibuf/main.c at Tue 28 Mar 16:11:05 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38338
+/proc/meminfo: memFree=41480220/98955364 swapFree=0/16755204
+[pid=38338] ppid=38336 vsize=23388 CPUtime=0 cores=0-11
+/proc/38338/stat : 38338 (cbmc) S 38336 38338 36322 34816 38273 4210688 242 0 0 0 0 0 0 0 20 0 1 0 845686419 23949312 883 18446744073709551615 4194304 9906174 140731700098112 140731700089752 140660743236560 0 24578 0 16384 1 0 0 17 8 0 0 0 0 0 12004448 12018144 15695872 140731700102211 140731700102321 140731700102321 140731700105165 0
+/proc/38338/statm: 5847 883 810 1395 0 1241 0
+Converting
+Type-checking main
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.0947519 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38338
+/proc/meminfo: memFree=41480220/98955364 swapFree=0/16755204
+[pid=38338] ppid=38336 vsize=42604 CPUtime=0.07 cores=0-11
+/proc/38338/stat : 38338 (cbmc) R 38336 38338 36322 34816 38273 4210688 5198 932 0 0 6 0 1 0 20 0 1 0 845686419 43626496 6345 18446744073709551615 4194304 9906174 140731700098112 140731700091512 140660742770368 0 24578 0 16384 0 0 0 17 8 0 0 0 0 0 12004448 12018144 15695872 140731700102211 140731700102321 140731700102321 140731700105165 0
+/proc/38338/statm: 10651 6345 1482 1395 0 6045 0
+Current children cumulated CPU time (s) 0.07
+Current children cumulated vsize (KiB) 42604
+
+[startup+0.100234 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38338
+/proc/meminfo: memFree=41480220/98955364 swapFree=0/16755204
+[pid=38338] ppid=38336 vsize=42604 CPUtime=0.07 cores=0-11
+/proc/38338/stat : 38338 (cbmc) R 38336 38338 36322 34816 38273 4210688 5201 932 0 0 6 0 1 0 20 0 1 0 845686419 43626496 6345 18446744073709551615 4194304 9906174 140731700098112 140731700091408 4591745 0 24578 0 16384 0 0 0 17 8 0 0 0 0 0 12004448 12018144 15695872 140731700102211 140731700102321 140731700102321 140731700105165 0
+/proc/38338/statm: 10651 6345 1482 1395 0 6045 0
+Current children cumulated CPU time (s) 0.07
+Current children cumulated vsize (KiB) 42604
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 581 steps
+simple slicing removed 4 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+553 variables, 458 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 0           
+decisions             : 299         (0.00 % random)
+propagations          : 554         
+conflict literals     : 0           -nan
+Runtime decision procedure: 0.003s
+
+** Results:
+[main.assertion.1] assertion !(((smain.qAge&1)==0 || ((smain.qAge>>1)&1)==1 || ((smain.qAge>>2)&1)==0) && ((smain.qAge&1)==1 || ((smain.qAge>>1)&1)==0 || ((smain.qAge>>2)&1)==1) && (!((smain.qAge&1)==1) || (smain.valid&1)==1) && (!(((smain.qAge>>1)&1)==1) || (smain.valid&1)==1) && (!(((smain.qAge>>2)&1)==1) || ((smain.valid>>1)&1)==1) && (!((smain.valid&1)==1 && ((smain.valid>>1)&1)==0) || (smain.qAge&1)==1) && (!((smain.valid&1)==1 && ((smain.valid>>2)&1)==0) || ((smain.qAge>>1)&1)==1) && (!(((smain.valid>>1)&1)==1 && ((smain.valid>>2)&1)==0) || ((smain.qAge>>2)&1)==1)): FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.200153 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38338
+/proc/meminfo: memFree=41480220/98955364 swapFree=0/16755204
+[pid=38338] ppid=38336 vsize=47620 CPUtime=0.18 cores=0-11
+/proc/38338/stat : 38338 (cbmc) R 38336 38338 36322 34816 38273 4210688 6459 932 0 0 16 1 1 0 20 0 1 0 845686419 48762880 7804 18446744073709551615 4194304 9906174 140731700098112 140731700091152 140660752132956 0 24578 0 16384 0 0 0 17 8 0 0 0 0 0 12004448 12018144 15695872 140731700102211 140731700102321 140731700102321 140731700105165 0
+/proc/38338/statm: 11905 7804 1705 1395 0 7299 0
+Current children cumulated CPU time (s) 0.18
+Current children cumulated vsize (KiB) 47620
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+[startup+0.200153 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38338
+/proc/meminfo: memFree=41480220/98955364 swapFree=0/16755204
+[pid=38338] ppid=38336 vsize=47620 CPUtime=0.18 cores=0-11
+/proc/38338/stat : 38338 (cbmc) R 38336 38338 36322 34816 38273 4210688 6459 932 0 0 16 1 1 0 20 0 1 0 845686419 48762880 7804 18446744073709551615 4194304 9906174 140731700098112 140731700091152 140660752132956 0 24578 0 16384 0 0 0 17 8 0 0 0 0 0 12004448 12018144 15695872 140731700102211 140731700102321 140731700102321 140731700105165 0
+/proc/38338/statm: 11905 7804 1705 1395 0 7299 0
+Current children cumulated CPU time (s) 0.18
+Current children cumulated vsize (KiB) 47620
+
+Child status: 10
+Real time (s): 0.213272
+runsolver_walltime: 0.213272
+CPU time (s): 0.208795
+runsolver_cputime: 0.208795
+CPU user time (s): 0.190142
+CPU system time (s): 0.018653
+CPU usage (%): 97.9008
+Max. virtual memory (cumulated for all children) (KiB): 47620
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.190142
+system time used= 0.018653
+maximum resident set size= 32008
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7407
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 24
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 31
+involuntary context switches= 5
+
+runsolver used 0.010447 second user time and 0.01468 second system time
+
+The end
+done at Tue 28 Mar 16:11:05 BST 2017
+Starting to processing non-pipelined-microprocessor/main.c at Tue 28 Mar 16:11:05 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38348
+/proc/meminfo: memFree=41480140/98955364 swapFree=0/16755212
+[pid=38348] ppid=38346 vsize=23388 CPUtime=0 cores=0-11
+/proc/38348/stat : 38348 (cbmc) S 38346 38348 36322 34816 38273 4210688 239 0 0 0 0 0 0 0 20 0 1 0 845686452 23949312 907 18446744073709551615 4194304 9906174 140726311657376 140726311649016 139897333717968 0 24578 0 16384 1 0 0 17 3 0 0 0 0 0 12004448 12018144 37539840 140726311658539 140726311658649 140726311658649 140726311661517 0
+/proc/38348/statm: 5847 907 834 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.0184221 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38348
+/proc/meminfo: memFree=41480140/98955364 swapFree=0/16755212
+[pid=38348] ppid=38346 vsize=23388 CPUtime=0 cores=0-11
+/proc/38348/stat : 38348 (cbmc) S 38346 38348 36322 34816 38273 4210688 239 0 0 0 0 0 0 0 20 0 1 0 845686452 23949312 907 18446744073709551615 4194304 9906174 140726311657376 140726311649016 139897333717968 0 24578 0 16384 1 0 0 17 3 0 0 0 0 0 12004448 12018144 37539840 140726311658539 140726311658649 140726311658649 140726311661517 0
+/proc/38348/statm: 5847 907 834 1395 0 1241 0
+Current children cumulated CPU time (s) 0
+Current children cumulated vsize (KiB) 23388
+Converting
+Type-checking main
+
+[startup+0.100246 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38348
+/proc/meminfo: memFree=41480140/98955364 swapFree=0/16755212
+[pid=38348] ppid=38346 vsize=42208 CPUtime=0.08 cores=0-11
+/proc/38348/stat : 38348 (cbmc) R 38346 38348 36322 34816 38273 4210688 5095 930 0 0 6 1 0 1 20 0 1 0 845686452 43220992 6234 18446744073709551615 4194304 9906174 140726311657376 140726311650768 139897333243796 0 24578 0 16384 0 0 0 17 3 0 0 0 0 0 12004448 12018144 37539840 140726311658539 140726311658649 140726311658649 140726311661517 0
+/proc/38348/statm: 10552 6234 1474 1395 0 5946 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42208
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 192 steps
+simple slicing removed 5 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+705 variables, 1591 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 10          
+decisions             : 773         (0.00 % random)
+propagations          : 968         
+conflict literals     : 84          0.00
+Runtime decision procedure: 0.002s
+
+** Results:
+[main.assertion.1] assertion !((signed int)opcode == 1 && (signed int)memOut1 == 0) && (signed int)progCntr == ((signed int)memOut2 & 7): FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.100246 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38348
+/proc/meminfo: memFree=41480140/98955364 swapFree=0/16755212
+[pid=38348] ppid=38346 vsize=42208 CPUtime=0.08 cores=0-11
+/proc/38348/stat : 38348 (cbmc) R 38346 38348 36322 34816 38273 4210688 5095 930 0 0 6 1 0 1 20 0 1 0 845686452 43220992 6234 18446744073709551615 4194304 9906174 140726311657376 140726311650768 139897333243796 0 24578 0 16384 0 0 0 17 3 0 0 0 0 0 12004448 12018144 37539840 140726311658539 140726311658649 140726311658649 140726311661517 0
+/proc/38348/statm: 10552 6234 1474 1395 0 5946 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42208
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 0.178783
+runsolver_walltime: 0.178783
+CPU time (s): 0.17466
+runsolver_cputime: 0.17466
+CPU user time (s): 0.144229
+CPU system time (s): 0.030431
+CPU usage (%): 97.6938
+Max. virtual memory (cumulated for all children) (KiB): 42208
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.144229
+system time used= 0.030431
+maximum resident set size= 31212
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7248
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 16
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 32
+involuntary context switches= 5
+
+runsolver used 0.012805 second user time and 0.011978 second system time
+
+The end
+done at Tue 28 Mar 16:11:05 BST 2017
+Starting to processing NullModem/main.c at Tue 28 Mar 16:11:05 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38358
+/proc/meminfo: memFree=41479968/98955364 swapFree=0/16755216
+[pid=38358] ppid=38356 vsize=23388 CPUtime=0 cores=0-11
+/proc/38358/stat : 38358 (cbmc) S 38356 38358 36322 34816 38273 4210688 241 0 0 0 0 0 0 0 20 0 1 0 845686474 23949312 882 18446744073709551615 4194304 9906174 140725727311984 140725727303624 140320519277520 0 24578 0 16384 1 0 0 17 1 0 0 0 0 0 12004448 12018144 39092224 140725727315006 140725727315116 140725727315116 140725727317965 0
+/proc/38358/statm: 5847 882 809 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.041031 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38358
+/proc/meminfo: memFree=41479968/98955364 swapFree=0/16755216
+[pid=38358] ppid=38356 vsize=27664 CPUtime=0.02 cores=0-11
+/proc/38358/stat : 38358 (cbmc) R 38356 38358 36322 34816 38273 4210688 1324 935 0 0 1 0 1 0 20 0 1 0 845686474 28327936 2584 18446744073709551615 4194304 9906174 140725727311984 140725727303264 140320518805883 0 24578 0 16384 0 0 0 17 1 0 0 0 0 0 12004448 12018144 39092224 140725727315006 140725727315116 140725727315116 140725727317965 0
+/proc/38358/statm: 6916 2584 1481 1395 0 2310 0
+Current children cumulated CPU time (s) 0.02
+Current children cumulated vsize (KiB) 27664
+Converting
+Type-checking main
+
+[startup+0.100218 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38358
+/proc/meminfo: memFree=41479968/98955364 swapFree=0/16755216
+[pid=38358] ppid=38356 vsize=42340 CPUtime=0.08 cores=0-11
+/proc/38358/stat : 38358 (cbmc) R 38356 38358 36322 34816 38273 4210688 5126 935 0 0 6 1 1 0 20 0 1 0 845686474 43356160 6271 18446744073709551615 4194304 9906174 140725727311984 140725727304016 5728488 0 24578 0 16384 0 0 0 17 1 0 0 0 0 0 12004448 12018144 39092224 140725727315006 140725727315116 140725727315116 140725727317965 0
+/proc/38358/statm: 10585 6271 1481 1395 0 5979 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42340
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 220 steps
+simple slicing removed 4 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+297 variables, 139 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 0           
+decisions             : 188         (0.00 % random)
+propagations          : 298         
+conflict literals     : 0           -nan
+Runtime decision procedure: 0.002s
+
+** Results:
+[main.assertion.1] assertion snullModem.rst == 0 || snullModem.ld == 1: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.100218 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38358
+/proc/meminfo: memFree=41479968/98955364 swapFree=0/16755216
+[pid=38358] ppid=38356 vsize=42340 CPUtime=0.08 cores=0-11
+/proc/38358/stat : 38358 (cbmc) R 38356 38358 36322 34816 38273 4210688 5126 935 0 0 6 1 1 0 20 0 1 0 845686474 43356160 6271 18446744073709551615 4194304 9906174 140725727311984 140725727304016 5728488 0 24578 0 16384 0 0 0 17 1 0 0 0 0 0 12004448 12018144 39092224 140725727315006 140725727315116 140725727315116 140725727317965 0
+/proc/38358/statm: 10585 6271 1481 1395 0 5979 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42340
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 0.17812
+runsolver_walltime: 0.17812
+CPU time (s): 0.17373
+runsolver_cputime: 0.17373
+CPU user time (s): 0.15265
+CPU system time (s): 0.02108
+CPU usage (%): 97.5354
+Max. virtual memory (cumulated for all children) (KiB): 42340
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.15265
+system time used= 0.02108
+maximum resident set size= 31492
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7265
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 24
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 32
+involuntary context switches= 6
+
+runsolver used 0.006027 second user time and 0.01766 second system time
+
+The end
+done at Tue 28 Mar 16:11:06 BST 2017
+Starting to processing ReqAck/main.c at Tue 28 Mar 16:11:06 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38368
+/proc/meminfo: memFree=41480032/98955364 swapFree=0/16755224
+[pid=38368] ppid=38366 vsize=23388 CPUtime=0 cores=0-11
+/proc/38368/stat : 38368 (cbmc) S 38366 38368 36322 34816 38273 4210688 239 0 0 0 0 0 0 0 20 0 1 0 845686497 23949312 907 18446744073709551615 4194304 9906174 140721543718080 140721543709720 140621542869968 0 24578 0 16384 1 0 0 17 0 0 0 0 0 0 12004448 12018144 19881984 140721543726145 140721543726255 140721543726255 140721543729101 0
+/proc/38368/statm: 5847 907 834 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.0665451 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38368
+/proc/meminfo: memFree=41480032/98955364 swapFree=0/16755224
+[pid=38368] ppid=38366 vsize=34404 CPUtime=0.04 cores=0-11
+/proc/38368/stat : 38368 (cbmc) R 38366 38368 36322 34816 38273 4210688 3066 934 0 0 3 0 1 0 20 0 1 0 845686497 35229696 4269 18446744073709551615 4194304 9906174 140721543718080 140721543709440 140621542398331 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 19881984 140721543726145 140721543726255 140721543726255 140721543729101 0
+/proc/38368/statm: 8634 4269 1474 1395 0 4028 0
+Current children cumulated CPU time (s) 0.04
+Current children cumulated vsize (KiB) 34404
+Converting
+Type-checking main
+
+[startup+0.100261 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38368
+/proc/meminfo: memFree=41480032/98955364 swapFree=0/16755224
+[pid=38368] ppid=38366 vsize=41808 CPUtime=0.08 cores=0-11
+/proc/38368/stat : 38368 (cbmc) R 38366 38368 36322 34816 38273 4210688 4971 934 0 0 6 1 1 0 20 0 1 0 845686497 42811392 6109 18446744073709551615 4194304 9906174 140721543718080 140721543709456 4626951 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 19881984 140721543726145 140721543726255 140721543726255 140721543729101 0
+/proc/38368/statm: 10452 6109 1474 1395 0 5846 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 41808
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 84 steps
+simple slicing removed 2 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+52 variables, 33 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 0           
+decisions             : 43          (0.00 % random)
+propagations          : 53          
+conflict literals     : 0           -nan
+Runtime decision procedure: 0.001s
+
+** Results:
+[main.assertion.1] assertion (signed int)ack == 1: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.100261 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38368
+/proc/meminfo: memFree=41480032/98955364 swapFree=0/16755224
+[pid=38368] ppid=38366 vsize=41808 CPUtime=0.08 cores=0-11
+/proc/38368/stat : 38368 (cbmc) R 38366 38368 36322 34816 38273 4210688 4971 934 0 0 6 1 1 0 20 0 1 0 845686497 42811392 6109 18446744073709551615 4194304 9906174 140721543718080 140721543709456 4626951 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 19881984 140721543726145 140721543726255 140721543726255 140721543729101 0
+/proc/38368/statm: 10452 6109 1474 1395 0 5846 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 41808
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 0.173704
+runsolver_walltime: 0.173704
+CPU time (s): 0.169118
+runsolver_cputime: 0.169118
+CPU user time (s): 0.147964
+CPU system time (s): 0.021154
+CPU usage (%): 97.3598
+Max. virtual memory (cumulated for all children) (KiB): 41808
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.147964
+system time used= 0.021154
+maximum resident set size= 30632
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7070
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 16
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 30
+involuntary context switches= 5
+
+runsolver used 0.008817 second user time and 0.016358 second system time
+
+The end
+done at Tue 28 Mar 16:11:06 BST 2017
+Starting to processing Rotate/main.c at Tue 28 Mar 16:11:06 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38378
+/proc/meminfo: memFree=41479296/98955364 swapFree=0/16755224
+[pid=38378] ppid=38376 vsize=23388 CPUtime=0 cores=0-11
+/proc/38378/stat : 38378 (cbmc) S 38376 38378 36322 34816 38273 4210688 238 0 0 0 0 0 0 0 20 0 1 0 845686519 23949312 886 18446744073709551615 4194304 9906174 140729493461760 140729493453400 140197927631824 0 24578 0 16384 1 0 0 17 4 0 0 0 0 0 12004448 12018144 18841600 140729493464129 140729493464239 140729493464239 140729493467085 0
+/proc/38378/statm: 5847 886 813 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.090871 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38378
+/proc/meminfo: memFree=41479296/98955364 swapFree=0/16755224
+[pid=38378] ppid=38376 vsize=41968 CPUtime=0.06 cores=0-11
+/proc/38378/stat : 38378 (cbmc) R 38376 38378 36322 34816 38273 4210688 4963 934 0 0 5 0 1 0 20 0 1 0 845686519 42975232 6104 18446744073709551615 4194304 9906174 140729493461760 140729493455088 4625983 0 24578 0 16384 0 0 0 17 4 0 0 0 0 0 12004448 12018144 18841600 140729493464129 140729493464239 140729493464239 140729493467085 0
+/proc/38378/statm: 10492 6104 1469 1395 0 5886 0
+Current children cumulated CPU time (s) 0.06
+Current children cumulated vsize (KiB) 41968
+Converting
+Type-checking main
+
+[startup+0.100268 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38378
+/proc/meminfo: memFree=41479296/98955364 swapFree=0/16755224
+[pid=38378] ppid=38376 vsize=41808 CPUtime=0.07 cores=0-11
+/proc/38378/stat : 38378 (cbmc) R 38376 38378 36322 34816 38273 4210688 4973 934 0 0 6 0 1 0 20 0 1 0 845686519 42811392 6108 18446744073709551615 4194304 9906174 140729493461760 140729493453248 140197927131838 0 24578 0 16384 0 0 0 17 4 0 0 0 0 0 12004448 12018144 18841600 140729493464129 140729493464239 140729493464239 140729493467085 0
+/proc/38378/statm: 10452 6108 1469 1395 0 5846 0
+Current children cumulated CPU time (s) 0.07
+Current children cumulated vsize (KiB) 41808
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 70 steps
+simple slicing removed 4 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+509 variables, 661 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 0           
+decisions             : 308         (0.00 % random)
+propagations          : 510         
+conflict literals     : 0           -nan
+Runtime decision procedure: 0.002s
+
+** Results:
+[main.assertion.1] assertion dout != 0xAAAAAAAA: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.100268 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38378
+/proc/meminfo: memFree=41479296/98955364 swapFree=0/16755224
+[pid=38378] ppid=38376 vsize=41808 CPUtime=0.07 cores=0-11
+/proc/38378/stat : 38378 (cbmc) R 38376 38378 36322 34816 38273 4210688 4973 934 0 0 6 0 1 0 20 0 1 0 845686519 42811392 6108 18446744073709551615 4194304 9906174 140729493461760 140729493453248 140197927131838 0 24578 0 16384 0 0 0 17 4 0 0 0 0 0 12004448 12018144 18841600 140729493464129 140729493464239 140729493464239 140729493467085 0
+/proc/38378/statm: 10452 6108 1469 1395 0 5846 0
+Current children cumulated CPU time (s) 0.07
+Current children cumulated vsize (KiB) 41808
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 0.167918
+runsolver_walltime: 0.167918
+CPU time (s): 0.163667
+runsolver_cputime: 0.163667
+CPU user time (s): 0.141357
+CPU system time (s): 0.02231
+CPU usage (%): 97.4684
+Max. virtual memory (cumulated for all children) (KiB): 41968
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.141357
+system time used= 0.02231
+maximum resident set size= 30432
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7074
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 24
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 32
+involuntary context switches= 3
+
+runsolver used 0.00695 second user time and 0.01856 second system time
+
+The end
+done at Tue 28 Mar 16:11:06 BST 2017
+Starting to processing Unidec/main.c at Tue 28 Mar 16:11:06 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38388
+/proc/meminfo: memFree=41479432/98955364 swapFree=0/16755224
+[pid=38388] ppid=38386 vsize=23388 CPUtime=0 cores=0-11
+/proc/38388/stat : 38388 (cbmc) S 38386 38388 36322 34816 38273 4210688 240 0 0 0 0 0 0 0 20 0 1 0 845686541 23949312 897 18446744073709551615 4194304 9906174 140736665426144 140736665417784 140099899894736 0 24578 0 16384 1 0 0 17 9 0 0 0 0 0 12004448 12018144 17928192 140736665429057 140736665429167 140736665429167 140736665432013 0
+/proc/38388/statm: 5847 897 825 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.0152051 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38388
+/proc/meminfo: memFree=41479432/98955364 swapFree=0/16755224
+[pid=38388] ppid=38386 vsize=23388 CPUtime=0 cores=0-11
+/proc/38388/stat : 38388 (cbmc) S 38386 38388 36322 34816 38273 4210688 240 0 0 0 0 0 0 0 20 0 1 0 845686541 23949312 897 18446744073709551615 4194304 9906174 140736665426144 140736665417784 140099899894736 0 24578 0 16384 1 0 0 17 9 0 0 0 0 0 12004448 12018144 17928192 140736665429057 140736665429167 140736665429167 140736665432013 0
+/proc/38388/statm: 5847 897 825 1395 0 1241 0
+Current children cumulated CPU time (s) 0
+Current children cumulated vsize (KiB) 23388
+Converting
+Type-checking main
+
+[startup+0.100282 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38388
+/proc/meminfo: memFree=41479432/98955364 swapFree=0/16755224
+[pid=38388] ppid=38386 vsize=42072 CPUtime=0.08 cores=0-11
+/proc/38388/stat : 38388 (cbmc) R 38386 38388 36322 34816 38273 4210688 5052 936 0 0 6 1 0 1 20 0 1 0 845686541 43081728 6213 18446744073709551615 4194304 9906174 140736665426144 140736665416832 140099899428769 0 24578 0 16384 0 0 0 17 9 0 0 0 0 0 12004448 12018144 17928192 140736665429057 140736665429167 140736665429167 140736665432013 0
+/proc/38388/statm: 10518 6213 1496 1395 0 5912 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42072
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+size of program expression: 268 steps
+simple slicing removed 7 assignments
+Generated 1 VCC(s), 1 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+914 variables, 1858 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 1           
+decisions             : 371         (0.00 % random)
+propagations          : 1134        
+conflict literals     : 4           0.00
+Runtime decision procedure: 0.002s
+
+** Results:
+[main.assertion.1] assertion found==1: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.100282 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38388
+/proc/meminfo: memFree=41479432/98955364 swapFree=0/16755224
+[pid=38388] ppid=38386 vsize=42072 CPUtime=0.08 cores=0-11
+/proc/38388/stat : 38388 (cbmc) R 38386 38388 36322 34816 38273 4210688 5052 936 0 0 6 1 0 1 20 0 1 0 845686541 43081728 6213 18446744073709551615 4194304 9906174 140736665426144 140736665416832 140099899428769 0 24578 0 16384 0 0 0 17 9 0 0 0 0 0 12004448 12018144 17928192 140736665429057 140736665429167 140736665429167 140736665432013 0
+/proc/38388/statm: 10518 6213 1496 1395 0 5912 0
+Current children cumulated CPU time (s) 0.08
+Current children cumulated vsize (KiB) 42072
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 0.186058
+runsolver_walltime: 0.186058
+CPU time (s): 0.18189
+runsolver_cputime: 0.18189
+CPU user time (s): 0.156694
+CPU system time (s): 0.025196
+CPU usage (%): 97.7599
+Max. virtual memory (cumulated for all children) (KiB): 42072
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.156694
+system time used= 0.025196
+maximum resident set size= 31080
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7198
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 16
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 31
+involuntary context switches= 5
+
+runsolver used 0.010046 second user time and 0.015649 second system time
+
+The end
+done at Tue 28 Mar 16:11:06 BST 2017
+Starting to processing Vlunc/main.c at Tue 28 Mar 16:11:06 BST 2017
+runsolver Copyright (C) 2010-2013 Olivier ROUSSEL
+
+This is runsolver version 3.3.4 (svn: 1649) [AEATK2]
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+command line: runsolver -C 18000 -W 18000 -d 1 -M 32768 /users/rajdeep/cbmc-git/cbmc/src/cbmc/cbmc --no-sat-preprocessor --unwind 10 --no-unwinding-assertions main.c 
+
+[AEATK] No environment variable "AEATK_SET_TASK_AFFINITY" detected, cores will be treated normally
+
+running on 12 cores: 0-11
+
+Enforcing CPUTime limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing CPUTime limit (hard limit, will send SIGXCPU): 18030 seconds
+Enforcing wall clock limit (soft limit, will send SIGTERM then SIGKILL): 18000 seconds
+Enforcing VSIZE limit (soft limit, will send SIGTERM then SIGKILL): 33554432 KiB
+Enforcing VSIZE limit (hard limit, stack expansion will fail with SIGSEGV, brk() and mmap() will return ENOMEM): 33605632 KiB
+Current StackSize limit: 8192 KiB
+
+CBMC version 5.5 64-bit x86_64 linux
+Parsing main.c
+
+[startup+0 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38398
+/proc/meminfo: memFree=41478684/98955364 swapFree=0/16755228
+[pid=38398] ppid=38396 vsize=23388 CPUtime=0 cores=0-11
+/proc/38398/stat : 38398 (cbmc) S 38396 38398 36322 34816 38273 4210688 242 0 0 0 0 0 0 0 20 0 1 0 845686564 23949312 907 18446744073709551615 4194304 9906174 140724944127104 140724944118744 140197113777104 0 24578 0 16384 1 0 0 17 0 0 0 0 0 0 12004448 12018144 12316672 140724944131138 140724944131248 140724944131248 140724944134093 0
+/proc/38398/statm: 5847 907 834 1395 0 1241 0
+Stop Solver Thread: Started
+[AEATK] No environment variable "AEATK_PORT" detected not sending updates
+
+
+[startup+0.0383819 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38398
+/proc/meminfo: memFree=41478684/98955364 swapFree=0/16755228
+[pid=38398] ppid=38396 vsize=26600 CPUtime=0.01 cores=0-11
+/proc/38398/stat : 38398 (cbmc) R 38396 38398 36322 34816 38273 4210688 1079 931 0 0 0 0 1 0 20 0 1 0 845686564 27238400 2312 18446744073709551615 4194304 9906174 140724944127104 140724944118656 140197113305467 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 12316672 140724944131138 140724944131248 140724944131248 140724944134093 0
+/proc/38398/statm: 6650 2312 1474 1395 0 2044 0
+Current children cumulated CPU time (s) 0.01
+Current children cumulated vsize (KiB) 26600
+Converting
+Type-checking main
+
+[startup+0.10024 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38398
+/proc/meminfo: memFree=41478684/98955364 swapFree=0/16755228
+[pid=38398] ppid=38396 vsize=42208 CPUtime=0.07 cores=0-11
+/proc/38398/stat : 38398 (cbmc) R 38396 38398 36322 34816 38273 4210688 5083 931 0 0 5 1 1 0 20 0 1 0 845686564 43220992 6219 18446744073709551615 4194304 9906174 140724944127104 140724944120512 140197113295764 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 12316672 140724944131138 140724944131248 140724944131248 140724944134093 0
+/proc/38398/statm: 10552 6219 1474 1395 0 5946 0
+Current children cumulated CPU time (s) 0.07
+Current children cumulated vsize (KiB) 42208
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Partial Inlining
+Generic Property Instrumentation
+Starting Bounded Model Checking
+Unwinding loop main.0 iteration 1 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 2 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 3 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 4 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 5 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 6 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 7 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 8 (10 max) file main.c line 187 function main thread 0
+Unwinding loop main.0 iteration 9 (10 max) file main.c line 187 function main thread 0
+Not unwinding loop main.0 iteration 10 (10 max) file main.c line 187 function main thread 0
+size of program expression: 2634 steps
+simple slicing removed 7 assignments
+Generated 10 VCC(s), 10 remaining after simplification
+Passing problem to propositional reduction
+converting SSA
+
+[startup+0.300159 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38398
+/proc/meminfo: memFree=41478684/98955364 swapFree=0/16755228
+[pid=38398] ppid=38396 vsize=47612 CPUtime=0.28 cores=0-11
+/proc/38398/stat : 38398 (cbmc) R 38396 38398 36322 34816 38273 4210688 6556 931 0 0 25 2 1 0 20 0 1 0 845686564 48754688 7974 18446744073709551615 4194304 9906174 140724944127104 140724944118896 8270028 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 12316672 140724944131138 140724944131248 140724944131248 140724944134093 0
+/proc/38398/statm: 11903 7974 1840 1395 0 7297 0
+Current children cumulated CPU time (s) 0.28
+Current children cumulated vsize (KiB) 47612
+Running propositional reduction
+Post-processing
+Solving with MiniSAT 2.2.1 without simplifier
+8290 variables, 15480 clauses
+SAT checker: instance is SATISFIABLE
+restarts              : 1
+conflicts             : 0           
+decisions             : 4040        (0.00 % random)
+propagations          : 8291        
+conflict literals     : 0           -nan
+Runtime decision procedure: 0.013s
+
+** Results:
+[vlunc.assertion.1] assertion Lcmd!=0: FAILURE
+
+** 1 of 1 failed (1 iteration)
+VERIFICATION FAILED
+
+
+
+Shutdown Reason:
+Solver termination detected (return from wait4)
+Requesting Timer Thread Should Shutdown 
+Setting solver is running = false 
+Joining on timer Thread 
+Stop Solver Thread: Should Execute
+Timer Thread detected shutdown flag, shutting downStop Solver Thread: Timer Thread Stopped
+
+[startup+0.300159 s]
+/proc/loadavg: 0.00 0.00 0.00 2/321 38398
+/proc/meminfo: memFree=41478684/98955364 swapFree=0/16755228
+[pid=38398] ppid=38396 vsize=47612 CPUtime=0.28 cores=0-11
+/proc/38398/stat : 38398 (cbmc) R 38396 38398 36322 34816 38273 4210688 6556 931 0 0 25 2 1 0 20 0 1 0 845686564 48754688 7974 18446744073709551615 4194304 9906174 140724944127104 140724944118896 8270028 0 24578 0 16384 0 0 0 17 0 0 0 0 0 0 12004448 12018144 12316672 140724944131138 140724944131248 140724944131248 140724944134093 0
+/proc/38398/statm: 11903 7974 1840 1395 0 7297 0
+Current children cumulated CPU time (s) 0.28
+Current children cumulated vsize (KiB) 47612
+
+Sending SIGTERM to process tree (bottom up)
+Stop Solver Thread: SIGTERM sent, waiting and sending SIGKILL
+Sleeping 1 seconds
+Stop Solver Thread: DONE
+Timer Thread Done
+Waiting for stop solver thread
+Sending fallback SIGKILL signal to process group
+
+Solver just ended. Dumping a history of the last processes samples
+
+Child status: 10
+Real time (s): 0.314702
+runsolver_walltime: 0.314702
+CPU time (s): 0.309695
+runsolver_cputime: 0.309695
+CPU user time (s): 0.28013
+CPU system time (s): 0.029565
+CPU usage (%): 98.409
+Max. virtual memory (cumulated for all children) (KiB): 47612
+
+getrusage(RUSAGE_CHILDREN,...) data:
+user time used= 0.28013
+system time used= 0.029565
+maximum resident set size= 32500
+integral shared memory size= 0
+integral unshared data size= 0
+integral unshared stack size= 0
+page reclaims= 7621
+page faults= 0
+swaps= 0
+block input operations= 0
+block output operations= 24
+messages sent= 0
+messages received= 0
+signals received= 0
+voluntary context switches= 31
+involuntary context switches= 5
+
+runsolver used 0.013873 second user time and 0.011036 second system time
+
+The end
+done at Tue 28 Mar 16:11:07 BST 2017

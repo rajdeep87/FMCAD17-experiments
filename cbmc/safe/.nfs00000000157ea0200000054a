@@ -1,0 +1,10 @@
+Test 'Arbiter'
+  Level: CORE
+  Input: main.c
+  Output: main.out
+  Options: --unwind 1
+  Results:
+    ^EXIT=0$
+    ^SIGNAL=0$
+    ^VERIFICATION SUCCESSFUL$
+Running runsolver -C 600 -d 1 -M 32768 /users/rajdeep/acdlp/2ls/src/2ls/2ls --verbosity 10 --acdl --decision ordered --learning first-uip --propagate chaotic --inline  --unwind 1 main.c >main.out 2>&1

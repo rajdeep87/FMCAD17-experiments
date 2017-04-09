@@ -4,12 +4,9 @@ import sys
 import re
 import subprocess
 import csv
-import os
 
-def processfile():
+def processfile(src):
 
-  src_path=sys.argv[1]
-  
   properties=0
   verified_prop=0
   false_prop=0
@@ -23,74 +20,84 @@ def processfile():
   propagations=0
   conflicts=0
   conflict_literals=0
-  learnt_clauses=0
+  restarts=0
 
   # temporary variable
-  status=""
+  status="Total"
   f_name=""
   func_name=""
-  time=""
   ver_time=0.0
   total_time=0.0
-
-  status_decision = re.compile("Decisions::") 
-  status_propagation = re.compile("Propagation::") 
-  status_conflict  = re.compile("Learning Iterations::")
-  status_conflict_literal = re.compile("Learnt literals::")
-  status_learnt_clauses = re.compile("Learnt clauses::")
-  status_time = re.compile("User time")
-  
-  for root, dirs, filenames in os.walk(src_path):
-    for f in filenames:
-      if f.endswith(".out"):
-        log = open(src_path + f, 'r')
-        lines=[line for line in log]
- 
-         
-        for line in lines:
-          if status_decision.search(line):
-            cols=line.split('::')
-            str1=cols[1].lstrip()
-            dec=str1.split(' ',1)[0]
-            num = int(dec)
-            decisions=decisions+num;
-          if status_propagation.search(line):
-            cols=line.split('::')
-            str1=cols[1].lstrip()
-            prop=str1.split(' ',1)[0]
-            num = int(prop)
-            propagations=propagations+num;
-          if status_conflict.search(line):
-            cols=line.split('::')
-            str1=cols[1].lstrip()
-            #str2=st1.rstrip()
-            con=str1.split(' ',1)[0]
-            num = int(con)
-            conflicts=conflicts+num
-          if status_conflict_literal.search(line):
-            cols=line.split('::')
-            str1=cols[1].lstrip()
-            lit=str1.split(' ',1)[0]
-            num = int(lit)
-            conflict_literals=conflict_literals+num
-          if status_learnt_clauses.search(line):
-            cols=line.split('::')
-            str1=cols[1].lstrip()
-            res=str1.split(' ',1)[0]
-            num = int(res)
-            learnt_clauses=learnt_clauses+num
-          if status_time.search(line):
-            cols=line.split(':')
-            str1=cols[1].lstrip()
-            time=str1.split(' ',1)[0]
-        #report.writerow([decisions,propagations,conflicts,conflict_literals,learnt_clauses]) 
-
-        print root, decisions, propagations, conflicts, conflict_literals, learnt_clauses, time 
-  
-  #report_file=open('statistics.csv', 'wb')
-  #report = csv.writer(report_file, delimiter=',',
-  #    quotechar='|', quoting=csv.QUOTE_MINIMAL)
-  #report.writerow(['decisions', 'propagations', 'conflicts', 'conflict literals', 'learnt clauses']) 
-  #report.writerow([decisions,propagations,conflicts,conflict_literals,learnt_clauses]) 
+  search_word="processing"
+  result=""
    
-processfile()            
+  file=open(src)
+  lines=[line for line in file]
+  
+  status_file_name = re.compile("Starting to processing") 
+  status_decision = re.compile("decisions") 
+  status_propagation = re.compile("propagations") 
+  status_conflict  = re.compile("conflicts")
+  status_conflict_literal = re.compile("conflict literals")
+  status_restart = re.compile("restarts")
+  status_result = re.compile("VERIFICATION")
+  status_time = re.compile("runsolver_walltime")
+  
+  report_file=open('statistics.csv', 'wb')
+  report = csv.writer(report_file, delimiter=',',
+     quotechar='|', quoting=csv.QUOTE_MINIMAL)
+
+  report.writerow(['file_name', 'decisions', 'propagations', 'conflicts', 'conflict_literals', 'restarts', 'time']) 
+
+  for line in lines:
+    if status_file_name.search(line):
+      list_of_words = line.split()
+      f_name = list_of_words[list_of_words.index(search_word) + 1] 
+    if status_decision.search(line):
+      cols=line.split(':')
+      str1=cols[1].lstrip()
+      dec=str1.split(' ',1)[0]
+      ld = int(dec)
+      decisions=decisions+ld;
+    if status_propagation.search(line):
+      cols=line.split(':')
+      str1=cols[1].lstrip()
+      prop=str1.split(' ',1)[0]
+      lp = int(prop)
+      propagations=propagations+lp;
+    if status_conflict.search(line):
+      cols=line.split(':')
+      str1=cols[1].lstrip()
+      con=str1.split(' ',1)[0]
+      lc = int(con)
+      conflicts=conflicts+lc
+    if status_conflict_literal.search(line):
+      cols=line.split(':')
+      str1=cols[1].lstrip()
+      lit=str1.split(' ',1)[0]
+      lct = int(lit)
+      conflict_literals=conflict_literals+lct
+    if status_restart.search(line):
+      cols=line.split(':')
+      str1=cols[1].lstrip()
+      res=str1.split(' ',1)[0]
+      restart = int(res)
+      lr = int(res)
+      restarts=restarts+lr
+    if status_time.search(line):
+      cols=line.split(':')
+      str1=cols[1].lstrip()
+      time=str1.split(' ',1)[0]
+      time_val = time
+      lr=0
+      lc=0
+      lct=0
+      lp=0
+      ld=0
+      report.writerow([f_name,dec,prop,con,lit,restart,time_val]) 
+    if status_result.search(line):
+       reslt = line.lstrip()
+  
+  report.writerow([status,decisions,propagations,conflicts,conflict_literals,restarts,time]) 
+            
+processfile("progress.log-acdlp")
